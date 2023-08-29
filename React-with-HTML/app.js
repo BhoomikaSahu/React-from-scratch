@@ -1,17 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-// const heading = React.createElement(
-//     'h2',
-//     {id: 'heading', name: 'React', className: 'react'},
-//     'Hello React'
-// );
+const heading = React.createElement(
+    'h2',
+    {id: 'heading', name: 'React', className: 'react'},
+    'Hello React'
+);
 
 const root1 = ReactDOM.createRoot(document.getElementById('root1'));
 const root2 = ReactDOM.createRoot(document.getElementById('root2'));
-// root.render(heading)
+root1.render(heading)
 
-// console.log(heading);
+console.log(heading);
 
 const container1 = React.createElement(
     'div',
@@ -60,6 +60,5 @@ const container2 = React.createElement(
     ]
 );
 
-root1.render(container1)
-root2.render(container2)
-
+root1.render(container1);
+root2.render(container2);
