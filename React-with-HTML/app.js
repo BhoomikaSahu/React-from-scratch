@@ -65,23 +65,47 @@ const root2 = ReactDOM.createRoot(document.getElementById('root2'));
 
 
 // React element       // JSX
-const myElement = <h1>I Love JSX!{<MyComponent/>}</h1>;
+// const myElement = <h1>I Love JSX!{<MyComponent/>}</h1>;
 // console.log(myElement, '----');
 // root2.render(myElement)
 
 // React component
-const MyComponent = () => {
+// const MyComponent = () => {
+//     return (
+//         <div>
+//             {/* {myElement} */}
+//             <p>I am fall in love with react🚀</p>
+//         </div>
+//     )
+// }
+
+// root2.render(<MyComponent />);
+// root2.render(myElement);
+// root2.render(MyComponent());
+
+
+// Data sanatization by JSX
+function CodeBlock({ code }) {
     return (
-        <div>
-            {/* {myElement} */}
-            <p>I am fall in love with react🚀</p>
-        </div>
-    )
+      <div>
+        <code>{code}</code>
+      </div>
+    );
+}
+<CodeBlock code="console.log('Hello, world!');" />
+function UserDetails({ username }) {
+    return (
+      <div>
+        <p>Welcome, {username}!</p>
+      </div>
+    );
 }
 
-root2.render(<MyComponent />);
-root2.render(myElement);
-root2.render(MyComponent());
+root2.render(<UserDetails username="<strong>John</strong>" />);
+root1.render(<CodeBlock code="console.log('Hello, world!');" />)
+
+
+
 
 
 
