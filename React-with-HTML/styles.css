@@ -1,3 +1,34 @@
-#heading{
-    color: rgb(57, 13, 138);
+.header{
+    border: 2px solid black;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px;
+}
+.logo{
+    width: 80px;
+}
+.nav-links > ul{
+    display: flex;
+    list-style-type: none;
+}
+.nav-links ul li{
+    padding: 0ps 10px;
+}
+.body{
+    border: 2px solid black;
+}
+.res-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.res-card{
+    margin: 10px 0px;
+    border: solid 1px black;
+    background: #f0f0f0;
+    padding: 5px;
+    width: 260px;
+}
+.res-logo{
+    width: 100%;
 }
