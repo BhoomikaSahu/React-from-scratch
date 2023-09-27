@@ -1,0 +1,1 @@
+export const APP_LOGO = "https://cdn2.f-cdn.com/contestentries/23918/7483126/51b08a9e9d89d_thumb900.jpg"
