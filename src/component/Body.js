@@ -7,6 +7,10 @@ const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
   const [totalRestaurants, setTotalRestaurants] = useState([]);
   const [searchText, setSearchText] = useState("");
+  if(listOfRestaurants) {
+    const [searchText, setSearchText] = useState("");
+
+  }
   useEffect(() => {
     fetchData();
   }, []);
@@ -24,6 +28,7 @@ const Body = () => {
         ?.restaurants
     );
   };
+  const [searchTex1t, setSearchTex1t] = useState("");
 
   return (
     <div className="body">
@@ -63,7 +68,7 @@ const Body = () => {
         </div>
       </div>
       <div className="res-container">
-        {listOfRestaurants.length ? (
+        {listOfRestaurants && listOfRestaurants.length ? (
           listOfRestaurants.map((res) => <ResCard resObj={res} />)
         ) : (
           <Shimmer />

@@ -21,7 +21,8 @@
   "homepage": "https://github.com/BhoomikaSahu/React-from-scratch#readme",
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.18.0"
   },
   "devDependencies": {
     "parcel": "^2.9.3",
