@@ -4,15 +4,13 @@ import ResCard from "./ResCard";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import { RESTAURANT_API } from "../utils/constants";
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
   const [totalRestaurants, setTotalRestaurants] = useState([]);
   const [searchText, setSearchText] = useState("");
-  if(listOfRestaurants) {
-    const [searchText, setSearchText] = useState("");
-
-  }
+  const onlineStatus = useOnlineStatus();
   useEffect(() => {
     fetchData();
   }, []);
@@ -28,8 +26,11 @@ const Body = () => {
         ?.restaurants
     );
   };
-  const [searchTex1t, setSearchTex1t] = useState("");
   
+  if(!onlineStatus) {
+    return <h1>Please check your internet connection!!</h1>
+  } 
+
   return (
     <div className="body">
       <div className="filter-restaurants">
